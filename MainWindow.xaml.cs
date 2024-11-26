@@ -18,9 +18,6 @@ using System.Windows.Threading;
 
 namespace Endless_Runner_WPF
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         DispatcherTimer gameTimer = new DispatcherTimer();
@@ -68,15 +65,15 @@ namespace Endless_Runner_WPF
         }
         private void StartGame()
         {
-            Canvas.SetLeft(background, 0); // set the first background to 0
-            Canvas.SetLeft(background2, 1262); // set the second background to 1262
+            Canvas.SetLeft(background, 0);
+            Canvas.SetLeft(background2, 1262);
             Canvas.SetLeft(player, 110);
             Canvas.SetTop(player, 140);
             Canvas.SetLeft(obstacle, 950);
             Canvas.SetTop(obstacle, 310);
             runSprite(1);
             obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/obstacle.png"));
-            obstacle.Fill = obstacleSprite; // assign the obstacle sprite to the obstacle object 
+            obstacle.Fill = obstacleSprite; 
             jumping = false;
             gameover = false;
             score = 0;
