@@ -58,7 +58,7 @@ namespace Endless_Runner_WPF
             if (e.Key == Key.Space && !jumping && Canvas.GetTop(player) > 260)
             {
                 jumping = true;
-                force = 15;
+                force = 20;
                 speed = -12;
                 playerSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/newRunner_02.gif"));
             }
